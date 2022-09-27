@@ -8,7 +8,7 @@ import VideoItemCard from '../VideoItemCard'
 import Header from '../Header'
 import SideBar from '../SideBar'
 import {
-  MainContainer,
+  //   MainContainer,
   HomeContainer,
   HomeContentContainer,
   HomeContentContainer1,
@@ -156,7 +156,7 @@ class Home extends Component {
     this.setState({searchInput: inputValue}, this.getHomeVideos)
   }
 
-  renderListOfJobs = () => {
+  renderListOfVideos = () => {
     const {videosList} = this.state
     console.log(videosList)
     return (
@@ -173,7 +173,7 @@ class Home extends Component {
     return (
       <>
         {videosList.length > 0
-          ? this.renderListOfJobs()
+          ? this.renderListOfVideos()
           : this.renderNoHomeVideosView()}
       </>
     )
@@ -256,11 +256,11 @@ class Home extends Component {
         {value => {
           const {isLightTheme} = value
           return (
-            <MainContainer isLightTheme={isLightTheme} data-testid="home">
+            <>
               <Header />
-              <HomeContainer isLightTheme={isLightTheme}>
+              <HomeContainer isLightTheme={isLightTheme} data-testid="home">
                 <SideBar />
-                <HomeContentContainer isLightTheme={isLightTheme}>
+                <HomeContentContainer>
                   {this.renderBanner()}
                   <HomeContentContainer1>
                     {this.renderSearchScreenInput()}
@@ -268,7 +268,7 @@ class Home extends Component {
                   </HomeContentContainer1>
                 </HomeContentContainer>
               </HomeContainer>
-            </MainContainer>
+            </>
           )
         }}
       </ThemeContext.Consumer>

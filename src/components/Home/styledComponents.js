@@ -1,13 +1,10 @@
 import styled from 'styled-components'
 
-export const MainContainer = styled.div`
-  background-color: ${props => (props.isLightTheme ? '#f9f9f9' : '#181818')};
-`
-
 export const HomeContainer = styled.div`
   display: flex;
   width: 100%;
   height: 90vh;
+  background-color: ${props => (props.isLightTheme ? '#f9f9f9' : '#181818')};
 `
 export const HomeContentContainer1 = styled.div`
   padding: 25px;
@@ -15,7 +12,6 @@ export const HomeContentContainer1 = styled.div`
 
 export const HomeContentContainer = styled.div`
   width: 100%;
-  background-color: ${props => (props.isLightTheme ? '#f9f9f9' : '#181818')};
   overflow-y: scroll;
 `
 export const SearchInputContainer = styled.div`
