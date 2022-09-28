@@ -1,16 +1,13 @@
 import styled from 'styled-components'
 
-export const HomeContainer = styled.div`
-  background-color: ${props => (props.isLightTheme ? '#f9f9f9' : '#181818')};
+export const TrendingContainer = styled.div`
   display: flex;
   width: 100%;
   height: 90vh;
-`
-export const HomeContentContainer1 = styled.div`
-  padding: 25px;
+  background-color: ${props => (props.isLightTheme ? '#f9f9f9' : '#0f0f0f')};
 `
 
-export const HomeContentContainer = styled.div`
+export const TrendingContentContainer = styled.div`
   width: 100%;
   overflow-y: scroll;
 `
@@ -49,6 +46,7 @@ export const VideoItemsContainer = styled.ul`
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  padding: 25px;
 `
 export const LoaderContainer = styled.div`
   display: flex;
@@ -82,7 +80,7 @@ export const NoVideosFoundDes = styled.p`
   color: ${props => (props.isLightTheme ? '#383838' : '#f4f4f4')};
   margin-top: 5px;
 `
-export const HomeButton = styled.button`
+export const TrendingRetryButton = styled.button`
   background-color: #4f46e5;
   color:#ffffff;
   font-family:"Roboto"
@@ -92,44 +90,28 @@ export const HomeButton = styled.button`
   border-radius:3px;
   margin-bottom:10px;
 `
-export const HomeBannerContainer = styled.div`
-  background-image: url('https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png');
+export const TrendingBannerContainer = styled.div`
+  background-color: ${props => (props.isLightTheme ? '#ebebeb' : '#181818')};
   background-size: cover;
-  height: 30vh;
+  height: 20vh;
   width: 100%;
-  padding: 20px;
-  display: ${props => (props.displayBanner ? 'flex' : 'none')};
-  justify-content: space-between;
+  padding: 30px;
+  display: flex;
+  align-items: center;
 `
-export const HeaderLogo = styled.img`
-  height: 25px;
-  margin-bottom: 10px;
-  @media screen and (min-width: 768px) {
-    height: 40px;
-  }
-`
-export const BannerDescription = styled.p`
-  font-size: 18px;
+export const BannerHeading = styled.h1`
+  font-size: 26px;
   font-family: 'Roboto';
-  color: #383838;
-  margin-top: 5px;
+  color: ${props => (props.isLightTheme ? '#383838' : '#ffffff')};
   line-height: 1.5;
+  margin-left: 15px;
 `
-export const BannerButton = styled.button`
-  background-color: transparent;
-  color:#231f20;
-  font-family:"Roboto"
-  font-size:16px;
-  padding:8px 16px 8px 16px;
-  border:1px solid #383838;
-  border-radius:3px;
-  margin-bottom:10px;
-`
-export const CrossIconButton = styled.button`
-  background-color: transparent;
-  border: none;
-  margin-top: 32px;
-  outline: none;
-  cursor: pointer;
-  margin-top: 0;
+export const BannerLogo = styled.div`
+  height: 60px;
+  width: 60px;
+  background-color: ${props => (props.isLightTheme ? '#d7dfe9' : '#0f0f0f')};
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `

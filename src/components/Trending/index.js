@@ -119,7 +119,6 @@ class Trending extends Component {
 
   renderSuccessView = () => {
     const {videosList} = this.state
-    console.log(videosList)
     return (
       <VideoItemsContainer>
         {videosList.map(video => (

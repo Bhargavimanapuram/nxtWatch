@@ -8,7 +8,6 @@ import VideoItemCard from '../VideoItemCard'
 import Header from '../Header'
 import SideBar from '../SideBar'
 import {
-  //   MainContainer,
   HomeContainer,
   HomeContentContainer,
   HomeContentContainer1,
@@ -258,7 +257,7 @@ class Home extends Component {
           return (
             <>
               <Header />
-              <HomeContainer isLightTheme={isLightTheme} data-testid="home">
+              <HomeContainer data-testid="home" isLightTheme={isLightTheme}>
                 <SideBar />
                 <HomeContentContainer>
                   {this.renderBanner()}

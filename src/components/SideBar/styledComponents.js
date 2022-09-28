@@ -8,11 +8,11 @@ export const SideBarContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 90vh;
+    height: 100vh;
   }
   @media screen and (min-width: 996px) {
     width: 20%;
-    height: 90vh;
+    height: 100vh;
   }
 `
 
